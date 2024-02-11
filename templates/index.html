@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    URL Shortener
+{% endblock %}
+
+{% block body %}
+    <form action="/create" method="post">
+        <input autofocus autocomplete="off" type="text" name="original" placeholder="Original URL">
+        <button type="submit">Create</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Original</th>
+                <th>Short</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td><a href="{{ row['original'] }}">{{ row['original'] }}</a></td>
+                    <td><a href="/{{ row['short'] }}">{{ row['short'] }}</a></td>
+                    <td>{{ row['clicks'] }}</td>
+                    <td><a href="/delete/{{ row['id'] }}">
+                        <i class="fa-solid fa-trash"></i>
+                    </a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
