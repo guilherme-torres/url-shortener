@@ -1,7 +1,7 @@
 # URL Shortener
 #### Video Demo:  [https://youtu.be/LxqH-rDGMzY](https://youtu.be/LxqH-rDGMzY)
 #### Description:
-Esse projeto se trata de um encurtador de URLs, uma aplicação web onde os usuários podem se cadastrar e criar links curtos, além disso, a aplicação mostra para o usuário o número de cliques em cada link curto criado.
+This project is a URL shortener, a web application where users can register and create short links, and the application shows the number of clicks on each short link created.
 
 #### Technologies:
 - Python/Flask
